@@ -1,0 +1,16 @@
+/* Geist */
+
+@font-face {
+  src: url("../fonts/headings/Geist-Bold.woff2"),
+    url("../fonts/headings/Geist-Bold.woff");
+  font-weight: 700;
+  font-family: "Geist", sans-serif;
+}
+
+/* Nunito */
+@font-face {
+  src: url("../fonts/body/Nunito-Regular.woff2"),
+    url("../fonts/body/Nunito-Regular.woff");
+  font-weight: 400;
+  font-family: "Nunito", sans-serif;
+}

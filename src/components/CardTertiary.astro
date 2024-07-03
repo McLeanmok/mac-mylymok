@@ -1,0 +1,28 @@
+---
+interface Props {
+    title?: string,
+    body?: string
+}
+const { title="Card Title", body="Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam gravida non commodo a sodales sit amet nisi."} = Astro.props;
+---
+<article class="card-tertiary">
+    <h3 class="h3">{title}</h3>
+    <p class="p">{body}</p>
+</article>
+
+<style>
+    .card-tertiary {
+        /* display: grid;
+        gap: var(--sp-100); */
+        background-color: var(--clr-tertiary);
+        color: var(--clr-white);
+        padding: var(--sp-250) var(--sp-200);
+        border-radius: var(--sp-50);
+        h3,p {
+            margin-bottom: var(--sp-100);
+        }
+    }
+    .card-tertiary:hover,.card-tertiary:focus {
+        border-radius: var(--sp-100);
+    }
+</style>

@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets"
+import facebook from "../../media/icons/Facebook -Dark.svg"
+import linkedin from "../../media/icons/Linkedin-Dark.svg"
+import spotify from "../../media/icons/Spotify-Dark.svg"
+---
+<div class="icons">
+    <ul class="flex gp-150" aria-label="Social media icons" role="list">
+        <li>
+            <a href="#"><Image src={facebook} alt="Link to Facebook Page" title="Facebook" aria-label="Link to Facebook Page" /></a>
+        </li>
+        <li>
+            <a href="#"><Image src={linkedin} alt="Link to LinkedIn Profile" title="Linkedin Logo" aria-label="Link to LinkedIn Profile" /></a>
+        </li>
+        <li>
+            <a href="#"><Image src={spotify} alt="Link To Spotify Profile" title="Spotify Logo" aria-label="Link to Spotify Profile"/></a>
+        </li>
+    </ul>
+</div>

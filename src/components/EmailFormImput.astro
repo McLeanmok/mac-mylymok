@@ -1,0 +1,28 @@
+---
+interface Props {
+    text: string,
+    aria: string,
+}
+const { text, aria } = Astro.props;
+---
+<input type="email" placeholder={text} title={text} aria-label={aria} name={text} class="inline"/>
+
+<style>
+    .inline {
+        padding: var(--sp-100);
+        background-color: var(--clr-light-orange);
+        border: 0;
+        font-size: var(--p);
+        font-family: var(--font-fam-headings);
+        border-radius: var(--sp-50);
+    }
+    .inline:focus {
+        border: 1px solid var(--clr-seccondary);
+        border-radius: var(--sp-200);
+    }
+    @media only screen and (max-width: 768px) {
+        .inline {
+            font-size: var(--p-mobile);
+        }
+    }
+</style>

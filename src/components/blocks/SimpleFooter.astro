@@ -1,0 +1,18 @@
+---
+import NarrowContainer from "../NarrowContainer.astro";
+import IconRow from "./IconRowLight.astro";
+---
+
+<footer class="p-section sm bg-tertiary">
+    <NarrowContainer>
+        <div class="footer-content flex flex-col gp-150">
+            <div class="icons m-auto">
+                <IconRow />
+            </div>
+            <p class="p m-auto">Copyright &copy; <span id="year"></span> | Core Theme</p>
+        </div>
+    </NarrowContainer>
+</footer>
+<script>
+    import "../../js/script.js"
+</script>

@@ -1,0 +1,63 @@
+---
+import BtnSeccondary from "../components/BtnSeccondary.astro";
+import Container from "../components/Container.astro";
+import Grid2 from "../components/Grid2.astro";
+import NarrowContainer from "../components/NarrowContainer.astro";
+import BlankTemplate from "../templates/BlankTemplate.astro";
+
+// Asset Imports
+import { Image } from "astro:assets";
+import headshot from"../media/splash-page/Headshot.jpg";
+import CardSeccondary from "../components/CardSeccondary.astro";
+import EmailOptinForm from "../components/blocks/EmailOptinForm.astro";
+import SimpleFooter from "../components/blocks/SimpleFooter.astro";
+---
+
+<BlankTemplate title="Mac Mylymok Media | Official Website" description="This Is the Splash Page for my website. You can get a feel for what you'll find on the website, and subscribe to the newsletter">
+    <!-- Hero Area -->
+     <section class="p-section txt-center justify-center | hero">
+        <Container>
+            <div class="text grid gp-200">
+                <h1 class="h1">World’s Nerdiest Media Nerd</h1>
+                <p class="p">Hey, my name is McLean Mylymok. I’m a first year media student at Vancouver Island. I am enthusiastic about all things media. On this upcoming website, you can find out more about me and my projects. You can also find tons of blog posts, and resources. Feel free to subscribe to get  notified when the website launches.</p>
+            </div>
+            <div class="flex justify-center m-auto mt-200">
+                <BtnSeccondary text="Join the Waitlit" link="#waitlist" />
+            </div>
+        </Container>
+     </section>
+
+     <!-- About -->
+      <section class="p-section">
+        <NarrowContainer>
+            <div class="text grid gp-250 txt-center">
+                <h2 class="h2">About Me</h2>
+                <p class="p">My name is McLean Mylymok. I am passionate about Digital media. My main medium is web, but I am comfortable with photography, and audio design. Outside of media, my primary passion is music. I listen to various genres, and I’m open to most music. I should warn you however, if you play Taylor Swift, things won’t go well.</p>
+                <Image src={headshot} alt="A photo of me in my wheelchair" title="A photo of me in my wheelchair" width={800} class="m-auto"/>
+            </div>
+        </NarrowContainer>
+      </section>
+
+      <!-- Who's This Site For? -->
+       <section class="bg-tertiary p-section">
+        <Container>
+            <h3 class="h3 clr-white mb-250 txt-center">Who is This Site For?</h3>
+            <Grid2>
+                <CardSeccondary title="For Those of you Who Want to Work With Me" body="If you wish to work with me, you’re in the right place (well, not quite). When the site is live, you will be able to view my projects, and find out more about my professional background. I can either join your company, or consult with me for personal projects." />
+                <CardSeccondary title="For Those of You Who Are Creative" body="If you call yourself the creative type, you are in luck. Once the website is live, you will be able to download my media resources absolutely free of charge. Aside from the templates , you will be able to find many of blog posts that cover everything from media to music reviews." />
+            </Grid2>
+        </Container>
+       </section>
+
+       <!-- Email Optin -->
+        <section class="p-section bg-alt" id="Waitlist">
+            <Container>
+                <div class="txt grid gp-200 txt-center mb-200">
+                    <h2 class="h2">Join the Waitlist</h2>
+                    <p class="p">If all that sounds good to you, enter your name, and email address below, and I’ll personally let you know when the website is live. Once it is live, you will be able to explore all the content I have to offer. So, please subscribe, I won’t spam you constantly, or use your data in any way. You got nothing to lose</p>
+                </div>
+                <EmailOptinForm />
+            </Container>
+        </section>
+        <SimpleFooter />
+</BlankTemplate>

@@ -1,0 +1,22 @@
+---
+interface Props {
+    text: string,
+    link: string,
+}
+const {text = "Click Me", link} = Astro.props;
+---
+<a href={link} class="btn-seccondary">{text}</a>
+
+<style>
+    .btn-seccondary {
+        background-color: var(--clr-seccondary);
+        padding: var(--sp-100) var(--sp-150);
+        color: var(--clr-white);
+        font-family: var(--font-fam-headings);
+        font-weight: 700;
+        border-radius: var(--sp-50);
+    }
+    .btn-seccondary:hover,.btn-seccondary:focus {
+        opacity: 80%;
+    }
+</style>

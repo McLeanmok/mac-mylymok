@@ -1,0 +1,20 @@
+---
+import BtnPrimary from "../components/BtnPrimary.astro";
+import Container from "../components/Container.astro";
+import NarrowContainer from "../components/NarrowContainer.astro";
+import BlankTemplate from "../templates/BlankTemplate.astro";
+---
+
+<BlankTemplate title="Page Not Found">
+    <section class="p-section">
+        <Container>
+            <div class="txt mb-200 txt-center clr-tertiary">
+                <h1 class="h1 mb-200">Umm, Akward. </h1>
+                <p class="p mb-200">This page doesn't exist.</p>
+            </div>
+            <div class="flex justify-center m-auto">
+            <BtnPrimary text="Go Home" link="/" />
+            </div>
+        </Container>
+    </section>
+</BlankTemplate>

@@ -1,0 +1,109 @@
+---
+import Container from "../Container.astro";
+import burger from"../../media/icons/Hamburger-Icon-Light.svg";
+import { Image } from "astro:assets";
+---
+
+<!-- HTML -->
+<header class="p-100 header bg-tertiary">
+    <Container>
+        <div class="flex space-between items-center navbar" id="nav">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="/" class="log clr-white">Core Theme</a>
+            </div>
+            <!-- Links -->
+            <div class="desktop-links">
+                <nav>
+                    <ul class="flex sp-100 links">
+                        <li>
+                            <a class="clr-white p-100 nav-link" href="/">Home</a>
+                        </li>
+                        <li>
+                           <a  class="clr-white p-100 nav-link" href="/components">Components</a>
+                        </li>
+                        <li>
+                            <a  class="clr-white p-100 nav-link" href="/blocks">Blocks</a>
+                        </li>
+                    </nav>
+            </div>
+                </ul>
+            <button id="burger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </Container>
+</header>
+<!-- Css -->
+<style>
+    .logo {
+        font-weight: bold;
+    }
+    li a {
+        transition: 0.3s ease-in-out;
+    }
+    li a:hover {
+        font-weight: bold;
+    }
+    .current {
+        font-weight: bold;
+    }
+    #burger {
+        display: none;
+    }
+    .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--clr-white);
+}
+    @media only screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+    }
+       #burger {
+            display: block;
+            background-color: transparent;
+            cursor: pointer;
+            border transparent;
+            box-shadow: none;
+            padding: 1rem;
+       }
+       .links {
+        position: fixed;
+        left: -100%;
+        top: 4rem;
+        flex-direction: column;
+        background-color: var(--clr-tertiary);
+        color: var(--clr-white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .links.active {
+        left: 0;
+    }
+    #burger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #burger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #burger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    }
+</style>
+
+<script>
+   import "../../js/script.js"
+</script>
