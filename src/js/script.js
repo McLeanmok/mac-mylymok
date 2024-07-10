@@ -29,8 +29,3 @@ function closeMenu() {
   burger.classList.remove("active");
   navMenu.classList.remove("active");
 }
-
-// Dynamically change date in footer
-document.querySelector("#year").textContent = new Date()
-  .getFullYear()
-  .toString();

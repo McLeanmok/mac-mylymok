@@ -594,7 +594,7 @@
   gap: var(--sp-550);
 }
 /* Layout Tools */
-
+/* Flexbox */
 .flex {
   display: flex;
 }
@@ -613,7 +613,7 @@
 .justify-center {
   justify-content: center;
 }
-
+/* Css Grid */
 .grid {
   display: grid;
 }
@@ -623,7 +623,20 @@
 .grid3 {
   grid-template-columns: repeat(3, 1fr);
 }
-
+/* Place Items */
+.place-left {
+  place-items: left;
+}
+.place-center {
+  place-items: center;
+}
+.place-right {
+  place-items: right;
+}
+.place-justify {
+  place-items: justify;
+}
+/* Text Alignment */
 .txt-center {
   text-align: center;
 }

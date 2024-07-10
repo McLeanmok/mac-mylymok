@@ -9,10 +9,20 @@ import IconRow from "./IconRowLight.astro";
             <div class="icons m-auto">
                 <IconRow />
             </div>
-            <p class="p m-auto">Copyright &copy; <span id="year"></span> | Core Theme</p>
+            <p class="m-auto footer-text">Copyright &copy; <span id="year"></span> | McLean Mylymok</p>
         </div>
     </NarrowContainer>
 </footer>
+<style>
+    .footer-text {
+        font-size: var(--p-mobile);
+    }
+</style>
 <script>
-    import "../../js/script.js"
+    
+// Dynamically change date in footer
+document.querySelector("#year").textContent = new Date()
+  .getFullYear()
+  .toString();
+
 </script>
