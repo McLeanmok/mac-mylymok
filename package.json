@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
+    "@astrojs/partytown": "^2.1.1",
     "astro": "^4.11.0",
     "resend": "^3.4.0",
     "sharp": "^0.33.4",
