@@ -29,7 +29,8 @@ function closeMenu() {
   navMenu.classList.remove("active");
 }
 
-// Dynamically change date in footer
-document.querySelector("#year").textContent = new Date()
-  .getFullYear()
-  .toString();
+    // Dynamically change date in footer
+    document.querySelector("#year").textContent = new Date()
+    .getFullYear()
+    .toString();
+  
